@@ -85,6 +85,13 @@
         </analyzer>
     </fieldType>
 
+    <!--Chinese support-->
+    <fieldType name="text_cn" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+          <tokenizer class="com.chenlb.mmseg4j.solr.MMSegTokenizerFactory"/>
+      </analyzer>
+    </fieldType>
+
     <!-- boolean type: "true" or "false" -->
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" omitNorms="true"/>
     <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
